@@ -9,9 +9,9 @@ keystone-manage bootstrap \
     --bootstrap-role-name admin \
     --bootstrap-service-name keystone \
     --bootstrap-region-id RegionOne \
-    --bootstrap-admin-url http://localhost:35357 \
-    --bootstrap-public-url http://localhost:5000 \
-    --bootstrap-internal-url http://localhost:5000
+    --bootstrap-admin-url http://sw-proxy01:35357 \
+    --bootstrap-public-url http://sw-proxy01:5000 \
+    --bootstrap-internal-url http://sw-proxy01:5000
 
 
 service keystone start
@@ -22,7 +22,7 @@ export OS_USERNAME=admin
 export OS_PASSWORD=password
 export OS_PROJECT_NAME=admin
 export OS_TENANT_NAME=admin
-export OS_AUTH_URL=http://127.0.0.1:5000/v3
+export OS_AUTH_URL=http://sw-proxy01:5000/v3
 
 export OS_IDENTITY_API_VERSION=3
 export OS_AUTH_VERSION=3
