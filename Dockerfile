@@ -3,7 +3,8 @@ FROM ubuntu
 RUN apt-get update &&  apt-get install -y \
     keystone \
     vim \
-    python-openstackclient
+    python-openstackclient \
+    less
 
 RUN sed 's/connection = sqlite:\/\/\/\/var\/lib\/keystone\/keystone.db/connection = mysql:\/\/root:password@mysql\/keystone/g' -i /etc/keystone/keystone.conf
 

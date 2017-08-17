@@ -34,9 +34,9 @@ openstack role create _member_
 
 openstack service create --name swift --description "Swift Object Storage Service" object-store
 
-openstack endpoint create --region RegionOne swift public "http://127.0.0.1:8080/v1/AUTH_\$(tenant_id)s"
-openstack endpoint create --region RegionOne swift internal "http://127.0.0.1:8080/v1/AUTH_\$(tenant_id)s"
-openstack endpoint create --region RegionOne swift admin "http://127.0.0.1:8080/v1"
+openstack endpoint create --region RegionOne swift public "http://sw-proxy01:8080/v1/AUTH_\$(tenant_id)s"
+openstack endpoint create --region RegionOne swift internal "http://sw-proxy01:8080/v1/AUTH_\$(tenant_id)s"
+openstack endpoint create --region RegionOne swift admin "http://sw-proxy01:8080/v1"
 
 
 openstack project create service
